@@ -1,0 +1,59 @@
+﻿@using ThreeLittlePigs.Web.Models;
+@model Dictionary<House, int>
+
+
+@{
+    ViewBag.Title = "Your Favorite Homes";
+}
+
+<h2>Your Favorite Homes, Ranked</h2>
+
+@if (TempData["StatusMessage"] != null)
+{
+    string message = TempData["StatusMessage"] as string;
+
+    <div class="alert alert-success alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@message</strong>
+    </div>
+
+}
+
+@{List<int> votes = new List<int>();
+
+    votes = Model.Values.ToList();
+    votes.Sort();
+    votes.Reverse();
+
+    Dictionary<House, int> sortedHouses = new Dictionary<House, int>();
+ }
+
+@while(Model.Count > 0)
+{
+    House house = Model.FirstOrDefault(v => v.Value == votes.First()).Key;
+
+    sortedHouses.Add(house, votes.First());
+
+    Model.Remove(house);
+    votes.Remove(votes.First());
+}
+
+@foreach (KeyValuePair<House, int> kvp in sortedHouses)
+{
+    <div class="container-fluid">
+
+        <a href="@Url.Action("Detail", "Home", new { houseCode = kvp.Key.HouseCode})">
+            <img id="houseimage" src="@Url.Content("~/Content/Images/" + kvp.Key.HouseCode.ToLower() + ".jpg")" alt="@kvp.Key.HouseName" />
+        </a>
+        <h3 id="name">@kvp.Key.HouseName</h3>
+        <p id="description">@kvp.Key.HouseDescription</p>
+        <p id="votes">Number of Votes: @kvp.Value</p>
+
+    </div>
+
+}
+
+
+
+
+

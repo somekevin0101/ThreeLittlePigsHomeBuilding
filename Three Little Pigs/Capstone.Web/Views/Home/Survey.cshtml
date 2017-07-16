@@ -1,0 +1,56 @@
+﻿@using ThreeLittlePigs.Web.Models;
+@model Survey
+
+
+@{
+    ViewBag.Title = "Survey";
+}
+
+<h2>Vote For Your Favorite House!</h2>
+
+<div id="surveydescription">
+    <p>We always enjoy hearing from our home buyers. Please select your favorite house from the dropdown menu and tell us a little about yourself!</p>
+</div>
+
+@if (TempData["Incomplete"] != null)
+{
+    string message = TempData["Incomplete"] as string;
+
+    <div class="alert alert-success alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@message</strong>
+    </div>
+}
+<div class="surveybody">
+    @using (Html.BeginForm("Survey", "Home", FormMethod.Post))
+    {
+
+        <div class="form-group">
+
+            @Html.LabelFor(m => m.HouseCode, "Please select your house:")
+            @Html.DropDownListFor(m => m.HouseCode, new SelectList(Model.Houses, "Value", "Text"), new { @class = "form-control", placeholder = "Select" })
+            @Html.ValidationMessageFor(m => m.HouseCode)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.EmailAddress, "Please enter your email address:")
+            @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control", placeholder = "littlepig@pigmail.com" })
+            @Html.ValidationMessageFor(m => m.EmailAddress)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.WolfDangerLevel, "Please select the wolf danger level in your area:")
+            @Html.DropDownListFor(m => m.WolfDangerLevel, Model.AcceptableWolfDangerLevels, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.WolfDangerLevel)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.State, "Please select your state of residence:")
+            @Html.DropDownListFor(m => m.State, Model.States, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.State)
+
+        </div>
+
+        <button class="submit">Submit</button>
+    }
+</div>

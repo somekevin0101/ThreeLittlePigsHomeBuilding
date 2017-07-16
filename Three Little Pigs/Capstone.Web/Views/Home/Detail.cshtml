@@ -1,0 +1,38 @@
+﻿@using ThreeLittlePigs.Web.Models;
+@model House
+
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <img id="detailImage" src="@Url.Content("~/Content/Images/" + Model.HouseCode.ToLower() + ".jpg")" alt="@Model.HouseName" />
+</div>
+
+<section class="subhed">
+    <h2>@Model.HouseName <span id="state">@Model.WolfProof</span></h2>
+
+    <h4>@Model.HouseDescription</h4>
+
+</section>
+
+
+
+
+
+<section class="stats1">
+
+    <p><b>Starting at:</b> @Model.MinPrice</p>
+
+    <p><b>Through:</b> @Model.MaxPrice</p>
+
+    <p><b>Minimum Square Feet:</b> @Model.MinSquareFeet</p>
+
+    <p><b>Maximum Square Feet:</b> @Model.MaxSquareFeet</p>
+
+</section>
+
+
