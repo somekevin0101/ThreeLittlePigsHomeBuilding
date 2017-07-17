@@ -5,15 +5,25 @@
 @{
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string notWolfProof = "Not Wolf Proof";
+    string wolfProof = "Wolf Proof";
+    string wolfStatus = "";
 }
 
-
+@if (Model.WolfProof == false)
+{
+   wolfStatus = notWolfProof;
+}
+else
+{
+    wolfStatus = wolfProof; 
+}
 <div>
     <img id="detailImage" src="@Url.Content("~/Content/Images/" + Model.HouseCode.ToLower() + ".jpg")" alt="@Model.HouseName" />
 </div>
 
 <section class="subhed">
-    <h2>@Model.HouseName <span id="state">@Model.WolfProof</span></h2>
+    <h2>@Model.HouseName <span id="state">@wolfStatus</span></h2>
 
     <h4>@Model.HouseDescription</h4>
 
@@ -25,13 +35,13 @@
 
 <section class="stats1">
 
-    <p><b>Starting at:</b> @Model.MinPrice</p>
+    <p><b>Starting at:</b> $@Model.MinPrice</p>
 
-    <p><b>Through:</b> @Model.MaxPrice</p>
+    <p><b>Through:</b> $@Model.MaxPrice</p>
 
-    <p><b>Minimum Square Feet:</b> @Model.MinSquareFeet</p>
+    <p><b>Minimum Square Feet:</b> @Model.MinSquareFeet Square Feet</p>
 
-    <p><b>Maximum Square Feet:</b> @Model.MaxSquareFeet</p>
+    <p><b>Maximum Square Feet:</b> @Model.MaxSquareFeet Square Feet</p>
 
 </section>
 

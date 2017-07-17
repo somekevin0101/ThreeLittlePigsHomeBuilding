@@ -6,13 +6,46 @@
 
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
 <body>
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Content/Images/interiorone.jpg" alt="interior room" />
+            </div>
+            <div class="item">
+                <img src="~/Content/Images/interiortwo.jpg" alt="interior room" />
+            </div>
+            <div class="item">
+                <img src="~/Content/Images/interiorthree.jpg" alt="interior room" />
+            </div>
+            <div class="item">
+                <img src="~/Content/Images/interiorfour.jpg" alt="interior room" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+        @foreach (House h in Model)
+        {
+            <a href="@Url.Action("Detail", "Home", new { houseCode = h.HouseCode})">
+                <img id="houseimage" src="@Url.Content("~/Content/Images/" + h.HouseCode.ToLower() + ".jpg")" alt="@h.HouseName" />
+            </a>
+
+        }
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
 </body>
-</html>
+

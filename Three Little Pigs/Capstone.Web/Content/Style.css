@@ -129,7 +129,8 @@ form button{
 
 
 #detailImage {
-    width: 100%;
+    width: 40%;
+    float:right;
 }
 
 #state{
@@ -148,8 +149,8 @@ form button{
 
 .subhed{
     margin:1em;
-    border:3px solid black;
-    padding: 1em;
+    padding-right: 5em;
+    padding-top: 5em;
 }
 
 
@@ -165,4 +166,24 @@ li{
 li:first-child{
 
 }
+.carousel .item {
+    padding-top: 5em;
+    width: 100%; /*slider width*/
+    max-height: 30em; /*slider height*/
+}
 
+    .carousel .item img {
+        width: 100%; /*img width*/
+    }
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -10em;
+        margin-right: -10em;
+    }
+}
+
+#houseimage{
+    width: 20em;
+    padding-top: 10em;
+}
