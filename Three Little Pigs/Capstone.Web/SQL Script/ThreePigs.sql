@@ -30,13 +30,13 @@ CREATE TABLE survey_result
 Insert house Values('strawhouse', 'Straw Home', 'A good starter home for rustic settings.
  With a bright and cheery look, this home is perfect for those who love a home that blends
   into the surrounding environment. Provides little to no protection from the big bad wolf 
-  but does feauture quick construction times.', 5000 , 50000, 500, 1500, 0)
+  but does feature quick construction times.', 5000 , 50000, 500, 1500, 0)
 Insert house Values('stickhouse', 'Stick Home', 'A sturdy wood home that will fit into any 
 neighborhood. Choose from 6 different wood types and includes the option of a full finished 
 basement. Provides some protection from wolves but does not come with the Three Pigs construction 
-company Wolfproof guarantee.', 25000, 150000, 800, 2000, 0)
+company Wolfproof guarantee &trade', 25000, 150000, 800, 2000, 0)
 Insert house Values('brickhouse', 'Brick Home', 'The ultimate in luxurious living. With a brick 
 home you will have the piece of mind that comes with knowing that no wolf could possibly blow
-your house down. Many additional ammenitites are included such as your very own in-ground pool 
+your house down. Many additional amenitites are included such as your very own in-ground pool 
 of mud. Please allow a year for construction.', 125000, 1000000, 1000, 5000, 1)
 

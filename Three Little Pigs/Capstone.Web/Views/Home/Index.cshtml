@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
-
 <body>
     <div id="carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -17,32 +16,45 @@
         </ol>
         <div class="carousel-inner">
             <div class="item active">
-                <img src="~/Content/Images/interiorone.jpg" alt="interior room" />
+                <img class="front" src="~/Content/Images/interior1.png" alt="interior room" />
             </div>
             <div class="item">
-                <img src="~/Content/Images/interiortwo.jpg" alt="interior room" />
+                <img class="front" src="~/Content/Images/interior2.png" alt="interior room" />
             </div>
             <div class="item">
-                <img src="~/Content/Images/interiorthree.jpg" alt="interior room" />
+                <img class="front" src="~/Content/Images/interior3.png" alt="interior room" />
             </div>
             <div class="item">
-                <img src="~/Content/Images/interiorfour.jpg" alt="interior room" />
+                <img class="front" src="~/Content/Images/interior4.png" alt="interior room" />
             </div>
 
         </div>
 
     </div>
+    <h2 id="frontheader">Have us Build Your Dream!</h2>
 
-    <div class="container-fluid">
+
+    <div class="houses">
 
         @foreach (House h in Model)
         {
-            <a href="@Url.Action("Detail", "Home", new { houseCode = h.HouseCode})">
-                <img id="houseimage" src="@Url.Content("~/Content/Images/" + h.HouseCode.ToLower() + ".jpg")" alt="@h.HouseName" />
-            </a>
-
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <img id="houseimage" src="@Url.Content("~/Content/Images/" + h.HouseCode.ToLower() + ".png")" alt="@h.HouseName" />
+               
+                <div class="button">
+                    <a class="btn btn-primary" href="@Url.Action("Detail", "Home", new { houseCode = h.HouseCode })" role="button">@(h.HouseName + "s")</a>
+                </div>
+            </div>
         }
     </div>
+
+    <footer>
+        <div class="social">
+            <p id="social">&copy 2017 Three Pigs Homebuilders<span class="socialspan"><a href="#">Facebook</a></span><span class="socialspan"><a href="#">Twitter</a></span><span class="socialspan"><a href="#">LinkedIn</a></span>
+        </div>
+
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>

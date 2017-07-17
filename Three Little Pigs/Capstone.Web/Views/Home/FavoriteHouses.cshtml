@@ -43,7 +43,7 @@
     <div class="container-fluid">
 
         <a href="@Url.Action("Detail", "Home", new { houseCode = kvp.Key.HouseCode})">
-            <img id="houseimage" src="@Url.Content("~/Content/Images/" + kvp.Key.HouseCode.ToLower() + ".jpg")" alt="@kvp.Key.HouseName" />
+            <img id="houseimage" src="@Url.Content("~/Content/Images/" + kvp.Key.HouseCode.ToLower() + ".png")" alt="@kvp.Key.HouseName" />
         </a>
         <h3 id="name">@kvp.Key.HouseName</h3>
         <p id="description">@kvp.Key.HouseDescription</p>

@@ -19,7 +19,7 @@ else
     wolfStatus = wolfProof; 
 }
 <div>
-    <img id="detailImage" src="@Url.Content("~/Content/Images/" + Model.HouseCode.ToLower() + ".jpg")" alt="@Model.HouseName" />
+    <img id="detailImage" src="@Url.Content("~/Content/Images/" + Model.HouseCode.ToLower() + ".png")" alt="@Model.HouseName" />
 </div>
 
 <section class="subhed">
@@ -39,9 +39,9 @@ else
 
     <p><b>Through:</b> $@Model.MaxPrice</p>
 
-    <p><b>Minimum Square Feet:</b> @Model.MinSquareFeet Square Feet</p>
+    <p><b>Min Size:</b> @(Model.MinSquareFeet + " Square Feet")</p>
 
-    <p><b>Maximum Square Feet:</b> @Model.MaxSquareFeet Square Feet</p>
+    <p><b>Max Size:</b> @(Model.MaxSquareFeet + " Square Feet")</p>
 
 </section>
 

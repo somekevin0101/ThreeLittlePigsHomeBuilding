@@ -112,13 +112,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\brickhouse.jpg" />
-    <Content Include="Content\Images\interiorfour.jpg" />
-    <Content Include="Content\Images\interiorone.jpg" />
-    <Content Include="Content\Images\interiorthree.jpg" />
-    <Content Include="Content\Images\interiortwo.jpg" />
-    <Content Include="Content\Images\stickhouse.jpg" />
-    <Content Include="Content\Images\strawhouse.jpg" />
+    <Content Include="Content\Images\brickhouse.png" />
+    <Content Include="Content\Images\founders.png" />
+    <Content Include="Content\Images\interior1.png" />
+    <Content Include="Content\Images\interior2.png" />
+    <Content Include="Content\Images\interior3.png" />
+    <Content Include="Content\Images\interior4.png" />
+    <Content Include="Content\Images\pigshrub.png" />
+    <Content Include="Content\Images\prettypig.png" />
+    <Content Include="Content\Images\stickhouse.png" />
+    <Content Include="Content\Images\strawhouse.png" />
     <Content Include="Content\Style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -163,6 +166,9 @@
     <Content Include="Views\Home\Detail.cshtml" />
     <Content Include="Views\Home\Survey.cshtml" />
     <Content Include="Views\Home\FavoriteHouses.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

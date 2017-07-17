@@ -33,6 +33,23 @@ namespace ThreeLittlePigs.Web.Controllers
 
             return View("Detail", h);
         }
+        [HttpGet]
+        public ActionResult About()
+        {
+            return View("About");
+        }
+
+        [HttpGet]
+        public ActionResult Services()
+        {
+            return View("Services");
+        }
+
+        [HttpGet]
+        public ActionResult Contact()
+        {
+            return View("Contact");
+        }
 
 
         [HttpGet]

@@ -5,13 +5,9 @@
 body {
     padding-top: 5px;
     padding-bottom: 20px;
+    background-color: aliceblue;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -49,16 +45,24 @@ textarea {
         content: '4 .col-md-3';
     }
 }
-
-.nav navbar-nav {
+.navbar navbar-inverse{
     margin: 3em;
     width: 100%;
-    height: 20em;
+    height: 100em;
+}
+
+#frontheader{
+    text-align: center;
+    padding: 1em;
+}
+#househeader{
+    text-align:center;
 }
 
 #description {
-    font-family: 'Comic Sans MS';
-    margin: 4em;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    margin: 1em;
 }
 
 #name {
@@ -117,9 +121,8 @@ textarea {
     
 }
 .surveybody {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .2)), url('Images/brickhouse.jpg');
-    background-repeat: no-repeat;
-    background-position:right;
+    background: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .2)), url('Images/prettypig.png'); background-repeat: no-repeat;
+    background-position: right;
     background-size: contain;
 }
 form button{
@@ -130,8 +133,13 @@ form button{
 
 #detailImage {
     width: 40%;
-    float:right;
+    float: right;
+    box-shadow: 4px 4px 6px #aaa;
 }
+/*.front{
+    width: 100%;
+    box-shadow: 4px 4px 6px #aaa;
+}*/
 
 #state{
     font-size: .75em;
@@ -168,14 +176,14 @@ li:first-child{
 }
 .carousel .item {
     padding-top: 5em;
-    width: 100%; /*slider width*/
-    max-height: 30em; /*slider height*/
+    width: 100%; 
+    max-height: 30em; 
 }
 
     .carousel .item img {
-        width: 100%; /*img width*/
+        width: 100%; 
     }
-/*full width container*/
+
 @media (max-width: 767px) {
     .block {
         margin-left: -10em;
@@ -183,7 +191,41 @@ li:first-child{
     }
 }
 
-#houseimage{
+#houseimage {
     width: 20em;
-    padding-top: 10em;
+    box-shadow: 4px 4px 6px #aaa;
+}
+
+.carousel-indicators li {
+    visibility: hidden;
+}
+
+.social{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.houses{
+    display:inline-block;
+    padding-bottom: 5em;
+}
+
+.button{
+    position:relative;
+    left: 9em;
+}
+.socialspan{
+    padding-left: 5em;
+}
+
+#abouthead{
+    text-align:center;
+    padding-top: 1em;   
+    padding-bottom: 1em;
+}
+
+#founders{
+    padding-top: 2em;
+    width: 40%;
+    float: right;
 }
