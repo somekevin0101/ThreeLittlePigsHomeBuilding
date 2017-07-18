@@ -112,14 +112,19 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\austin.png" />
     <Content Include="Content\Images\brickhouse.png" />
+    <Content Include="Content\Images\calgary.png" />
     <Content Include="Content\Images\founders.png" />
     <Content Include="Content\Images\interior1.png" />
     <Content Include="Content\Images\interior2.png" />
     <Content Include="Content\Images\interior3.png" />
     <Content Include="Content\Images\interior4.png" />
+    <Content Include="Content\Images\newyork.png" />
     <Content Include="Content\Images\pigshrub.png" />
     <Content Include="Content\Images\prettypig.png" />
+    <Content Include="Content\Images\redpig.png" />
+    <Content Include="Content\Images\sanfran.png" />
     <Content Include="Content\Images\stickhouse.png" />
     <Content Include="Content\Images\strawhouse.png" />
     <Content Include="Content\Style.css" />
@@ -136,6 +141,7 @@
     <None Include="Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\JavaScript.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="SQL Script\ThreePigs.sql" />
